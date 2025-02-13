@@ -1,0 +1,2 @@
+C:\versionering\XR-SPL2\XR-SPL2\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+C:\versionering\XR-SPL2\XR-SPL2\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt
