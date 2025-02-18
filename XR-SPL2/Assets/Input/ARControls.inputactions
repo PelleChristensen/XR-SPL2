@@ -1,0 +1,34 @@
+{
+    "name": "ARControls",
+    "maps": [
+        {
+            "name": "New action map",
+            "id": "813a96e4-eb69-4733-9ee2-8e545174e15d",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "f6a825fd-ac35-4d36-b699-026433eeef3c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "11ad34b3-f18d-4a65-99d0-041c502f7d6e",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
