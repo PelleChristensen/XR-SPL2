@@ -10,17 +10,28 @@ public class SoundPlayer : MonoBehaviour
 
     public void PlayMusic(AudioClip clip, Casette.GENRE genre)
     {
-        Debug.Log("SoundPlayer.PlayMusic " + genre);
         audiosource.Stop();
         audiosource.loop = true; 
         audiosource.clip = clip; 
-        audiosource.Play(); 
+        audiosource.Play();
+        SendSoundUpdate(genre); 
+    }
+
+    public void StopPlaying()
+    {
+        audiosource.Stop();
+        SendSoundUpdate(Casette.GENRE.IDLE);
+    }
+
+    private void SendSoundUpdate(Casette.GENRE genre)
+    {
         if(OnSoundUpdated != null)
         {
             OnSoundUpdated(genre);
         }
     }
 
+    #region singletonstuff
     private static SoundPlayer instance; 
     public static SoundPlayer Instance
     {
@@ -46,4 +57,5 @@ public class SoundPlayer : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    #endregion
 }
