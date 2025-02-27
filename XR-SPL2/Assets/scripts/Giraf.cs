@@ -28,7 +28,7 @@ public class Giraf : MonoBehaviour
                 animator.SetTrigger("METAL");
             break;
             default : 
-                animator.SetTrigger("DEFAULT");
+                animator.SetTrigger("IDLE");
             break; 
         }
     }
