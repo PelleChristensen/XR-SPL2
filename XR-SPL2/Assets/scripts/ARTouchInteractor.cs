@@ -1,8 +1,5 @@
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.InputSystem;
-using UnityEngine.EventSystems;
-using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
 public class ARTouchInteractor : MonoBehaviour
 {
@@ -19,17 +16,20 @@ public class ARTouchInteractor : MonoBehaviour
 
     private void PerformRaycast()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Touchscreen.current.primaryTouch.position.ReadValue());
-        RaycastHit hit;
+        //Definér en Ray. Det er et objekt der består ag en position og en retning. 
+        //Her skabes der en Ray ved at finde en position ud fra kameraet vha en position man trækker fra touchscreen.
+          Ray ray = Camera.main.ScreenPointToRay(Touchscreen.current.primaryTouch.position.ReadValue());
 
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity, interactableLayer))
+        //EtRaucasthit objekt indeholder information om det objekt der bliver ramt + plus andet (læs dokumentation) 
+        RaycastHit hit;
+        
+        //Der testes om noget rammes
+        if (Physics.Raycast(ray, out hit, 10f, interactableLayer))
         {
             Casette interactable = hit.collider.GetComponent<Casette>();
             if (interactable)
             {
                 interactable.OnPressed();
-                //OnSelectEntered(null);
-                Debug.Log($"Interacted with {hit.collider.name}");
             }
         }
     }

@@ -5,16 +5,31 @@ using UnityEngine.Rendering;
 public class SoundPlayer : MonoBehaviour
 {    
     [SerializeField] private AudioSource audiosource; 
+
+    private AudioClip loadedclip =  null; 
+    private Casette.GENRE currentgenre = Casette.GENRE.IDLE; 
     public delegate void ListenerEvent(Casette.GENRE genre);
     public static event ListenerEvent OnSoundUpdated;
 
-    public void PlayMusic(AudioClip clip, Casette.GENRE genre)
+    public void PlayMusic()
     {
         audiosource.Stop();
         audiosource.loop = true; 
-        audiosource.clip = clip; 
+        audiosource.clip = loadedclip; 
         audiosource.Play();
         SendSoundUpdate(genre); 
+    }
+
+    public void LoadClip(AudioClip clip, Casette.GENRE newgenre)
+    {
+        loadedclip = clip; 
+        currentgenre = newgenre;
+    }
+
+    public void StartPlaying()
+    {
+        audiosource.Play();
+        SendSoundUpdate(currentgenre);
     }
 
     public void StopPlaying()
