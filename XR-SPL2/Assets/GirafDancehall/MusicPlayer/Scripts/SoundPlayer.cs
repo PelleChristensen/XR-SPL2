@@ -6,7 +6,7 @@ public class SoundPlayer : MonoBehaviour
 {    
     [SerializeField] private AudioSource audiosource; 
 
-    private AudioClip loadedclip =  null; 
+    private AudioClip loadedclip = null; 
     private Casette.GENRE currentgenre = Casette.GENRE.IDLE; 
     public delegate void ListenerEvent(Casette.GENRE genre);
     public static event ListenerEvent OnSoundUpdated;
@@ -17,25 +17,33 @@ public class SoundPlayer : MonoBehaviour
         audiosource.loop = true; 
         audiosource.clip = loadedclip; 
         audiosource.Play();
-        SendSoundUpdate(genre); 
+        SendSoundUpdate(currentgenre); 
     }
-
+    
     public void LoadClip(AudioClip clip, Casette.GENRE newgenre)
     {
         loadedclip = clip; 
         currentgenre = newgenre;
+        //SendSoundUpdate(currentgenre);
     }
 
     public void StartPlaying()
     {
-        audiosource.Play();
-        SendSoundUpdate(currentgenre);
+        audiosource.clip = loadedclip; 
+        if(audiosource.clip && !audiosource.isPlaying)
+        {
+            audiosource.Play();
+            SendSoundUpdate(currentgenre);
+        }
     }
 
     public void StopPlaying()
     {
-        audiosource.Stop();
-        SendSoundUpdate(Casette.GENRE.IDLE);
+        if(audiosource.isPlaying)
+        {
+            audiosource.Stop();
+            SendSoundUpdate(Casette.GENRE.IDLE);
+        }
     }
 
     private void SendSoundUpdate(Casette.GENRE genre)

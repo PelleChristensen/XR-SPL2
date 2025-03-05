@@ -9,8 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2450675358891755307}
-  - component: {fileID: 8653637033359812813}
-  m_Layer: 0
+  - component: {fileID: 6146735143075634563}
+  - component: {fileID: 4641132778316616052}
+  - component: {fileID: 5418156819964754420}
+  m_Layer: 30
   m_Name: playbutton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33,8 +35,47 @@ Transform:
   - {fileID: 1540357181315542610}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &8653637033359812813
-MeshCollider:
+--- !u!54 &6146735143075634563
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8774826271378270853}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &4641132778316616052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8774826271378270853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 727bcbf6451da2246b0bdf8622d7836d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &5418156819964754420
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -43,7 +84,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1073741824
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -51,10 +92,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 3
+  m_Radius: 0.02
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1363125916501641657
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -132,6 +172,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: trianglebutton
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0db1825161e34fc40ac0e3411cc32873,
+        type: 3}
+      propertyPath: m_Layer
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

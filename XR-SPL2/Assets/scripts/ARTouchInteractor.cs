@@ -24,12 +24,13 @@ public class ARTouchInteractor : MonoBehaviour
         RaycastHit hit;
         
         //Der testes om noget rammes
-        if (Physics.Raycast(ray, out hit, 10f, interactableLayer))
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, interactableLayer))
         {
-            Casette interactable = hit.collider.GetComponent<Casette>();
-            if (interactable)
+            //IPressable pressable = hit.collider.TryGetComponent<IPressable>(out IPressable pressable); 
+            if (hit.collider.TryGetComponent<IPressable>(out IPressable pressable))
             {
-                interactable.OnPressed();
+                Debug.Log("[AR-DEBUG] A Pressable has been pressed");
+                pressable.OnPressed();
             }
         }
     }

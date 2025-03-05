@@ -1,5 +1,5 @@
-
-public interface IPressable
+public interface IPressable 
 {
-    void OnPressed(); 
+    public void OnPressed();
 }
+

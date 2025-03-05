@@ -8,6 +8,10 @@ public class MusicPlayerUI : MonoBehaviour
     [SerializeField]TMPro.TMP_Text descriptionlabel; 
     [SerializeField]CanvasGroup canvas; 
 
+    [SerializeField]private PauseButton pausebutton; 
+
+    [SerializeField]private Playbutton playbutton; 
+
     void Start()
     {
         canvas.interactable = false; 
@@ -29,11 +33,6 @@ public class MusicPlayerUI : MonoBehaviour
         descriptionlabel.text = genre.ToString(); 
         canvas.alpha = 1; 
         canvas.interactable = true; 
-    }
-
-    public void StopPlaying()
-    {
-        SoundPlayer.Instance.StopPlaying();
     }
 
 }
