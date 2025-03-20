@@ -20,7 +20,7 @@ public class ARTouchInteractor : MonoBehaviour
         //Her skabes der en Ray ved at finde en position ud fra kameraet vha en position man trækker fra touchscreen.
           Ray ray = Camera.main.ScreenPointToRay(Touchscreen.current.primaryTouch.position.ReadValue());
 
-        //EtRaucasthit objekt indeholder information om det objekt der bliver ramt + plus andet (læs dokumentation) 
+        //Et Raucasthit objekt indeholder information om det objekt der bliver ramt + plus andet (læs dokumentation) 
         RaycastHit hit;
         
         //Der testes om noget rammes
