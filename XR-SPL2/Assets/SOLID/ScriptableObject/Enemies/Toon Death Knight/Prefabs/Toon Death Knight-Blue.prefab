@@ -6357,6 +6357,7 @@ GameObject:
   m_Component:
   - component: {fileID: 451078}
   - component: {fileID: 9564250}
+  - component: {fileID: 2226221151131666690}
   m_Layer: 0
   m_Name: Toon Death Knight-Blue
   m_TagString: Untagged
@@ -6419,3 +6420,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2226221151131666690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4d64d6f800157b429cd687d54be12bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats: {fileID: 11400000, guid: d1b551e9e97c15f4e9b3421e537afdef, type: 2}
