@@ -1,41 +1,38 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField]private int maxhealth = 100, starthealth = 50; 
-    [SerializeField]private HealthView view; 
-    private float currenthealth = 0;  
 
+    public UnityAction healthchanged; 
+    private float currenthealth = 0;
+    private float pasthealth = - 999; 
     public float Health { get => currenthealth; set => currenthealth = value; }
-    
-    void Start()
-    {
-        
-    }
-
+    public int MaxHealth { get => maxhealth; }
     public void ResetHealth()
     {
         currenthealth = starthealth;
-        UpdateView(); 
+        OnUpdateHealth();
     }
 
     public void UpdateHealth(int value)
     {
-        float oldhealth = currenthealth;
+        pasthealth = currenthealth;
         float newhealth = currenthealth + value; 
         currenthealth = Mathf.Clamp(newhealth,0,maxhealth);
-
-        Debug.Log("Updatehealth: old: " + oldhealth + " newhealth: " + newhealth + " currenthealth: " + currenthealth);
-        if(currenthealth != oldhealth)
+        OnUpdateHealth();
+    }
+    private void OnUpdateHealth()
+    {
+        if(pasthealth != currenthealth)
         {
-            UpdateView();
+            healthchanged?.Invoke(); 
         }
     }
-
-    private void UpdateView()
+    public bool IsDead()
     {
-        float healthvalue = currenthealth / maxhealth; 
-        view.UpdateHealth(healthvalue); 
+        return currenthealth <= 0; 
     }
 
 }

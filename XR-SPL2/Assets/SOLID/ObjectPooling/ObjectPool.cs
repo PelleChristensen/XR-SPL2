@@ -3,7 +3,7 @@ using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Pool;
 
-[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/ObjectPool", order = 1)]
+[CreateAssetMenu(fileName = "ObjectPool", menuName = "ScriptableObjects/ObjectPool", order = 1)]
 public class ObjectPool : ScriptableObject
 {
     [SerializeField] private uint PoolSize; 

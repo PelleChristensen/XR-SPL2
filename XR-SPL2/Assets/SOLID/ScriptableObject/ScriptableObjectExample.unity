@@ -940,6 +940,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1696722086}
+    - targetCorrespondingSourceObject: {fileID: 114588, guid: 99a904156eb92af43bd3dbb779d975df,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1696722087}
   m_SourcePrefab: {fileID: 100100000, guid: 99a904156eb92af43bd3dbb779d975df, type: 3}
 --- !u!1 &1696722080 stripped
 GameObject:
@@ -967,7 +971,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxhealth: 100
   starthealth: 50
-  view: {fileID: 1393892924}
 --- !u!65 &1696722083
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1002,8 +1005,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 1696722082}
+  view: {fileID: 0}
   animator: {fileID: 1696722085}
-  movementmodifier: 2
+  movement: {fileID: 1696722087}
 --- !u!95 &1696722085 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 9567504, guid: 99a904156eb92af43bd3dbb779d975df,
@@ -1037,6 +1041,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1696722087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696722080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc72a22ac5a55ae4d8bac4baa1326304, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementmodifier: 0.5
 --- !u!1 &1879408327
 GameObject:
   m_ObjectHideFlags: 0

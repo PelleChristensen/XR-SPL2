@@ -4,39 +4,28 @@ using UnityEngine.InputSystem;
 public class PlayerLogic : MonoBehaviour
 {
     [SerializeField]PlayerHealth health; 
+    [SerializeField]HealthView view; 
     [SerializeField]Animator animator; 
-    InputAction forward; 
-    InputAction backward; 
-
-    private bool ISDead = false; 
-    public float movementmodifier = 0.5f; 
+    [SerializeField]PlayerMovement movement; 
 
     void Start()
     {
-        forward = InputSystem.actions.FindAction("Keyboard/forward");
-        backward = InputSystem.actions.FindAction("Keyboard/Back"); 
-
         health.ResetHealth();
     }
 
-
-    void Update()
+    void OnEnable()
     {
-        if(ISDead) return; 
+        health.healthchanged += UpdateHealthViews;  
+    }
 
-        float movement = 0; 
-        if(forward.IsPressed())
+    private void UpdateHealthViews()
+    {
+        if(!health.IsDead())
         {
-            movement += movementmodifier; 
+            view.UpdateHealth(health.Health / health.MaxHealth);
+            return; 
         }
-        if(backward.IsPressed())
-        {
-            movement -= movementmodifier; 
-        }
-        if(movement != 0)
-        {
-            this.gameObject.transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z + (movement * Time.deltaTime)); 
-        }
+        Die();
     }
 
     void OnCollisionEnter(Collision other)
@@ -46,20 +35,10 @@ public class PlayerLogic : MonoBehaviour
             health.UpdateHealth(-10);
             animator.SetTrigger("Take Damage");
         }
-
-        if(health.Health <= 0)
-        {
-            ISDead = true; 
-            UpDatePlayerState();
-        } 
     }
-
-    void UpDatePlayerState()
+    private void Die()
     {
-        if(ISDead)
-        {
-            animator.SetTrigger("Die");
-        }
+        movement.enabled = false; 
+        animator.SetTrigger("Die");
     }
-
 }
