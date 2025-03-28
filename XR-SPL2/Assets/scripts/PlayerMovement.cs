@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 
     InputAction forward; 
     InputAction backward; 
-    public float movementmodifier = 0.5f; 
+    public float movementmodifier = 1.5f; 
 
     void Start()
     {

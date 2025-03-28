@@ -1005,7 +1005,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 1696722082}
-  view: {fileID: 0}
+  view: {fileID: 1393892924}
   animator: {fileID: 1696722085}
   movement: {fileID: 1696722087}
 --- !u!95 &1696722085 stripped
