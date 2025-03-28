@@ -377,7 +377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pool: {fileID: 11400000, guid: 6489c0ef24c0c5046ad53bec82ef1988, type: 2}
-  spawntime: 0.3
+  spawntime: 0.1
 --- !u!4 &646702917
 Transform:
   m_ObjectHideFlags: 0
@@ -599,8 +599,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1018908665}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.079561025, y: -0.9084365, z: 0.20248589, w: -0.35694915}
-  m_LocalPosition: {x: -14.871764, y: 6.492871, z: 6.8605585}
+  m_LocalRotation: {x: -0.0009902114, y: 0.9302813, z: -0.36683717, w: -0.0025107695}
+  m_LocalPosition: {x: -0.418765, y: 12.536649, z: 6.9982967}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
