@@ -10,7 +10,7 @@ public class HealthPresenter : MonoBehaviour
     {
         data.OnHealthChanged += HealthChanged; 
     }
-
+    
     void HealthChanged()
     {
         view.UpdateHealth(data.Health / data.MaxHealth); 
@@ -20,6 +20,5 @@ public class HealthPresenter : MonoBehaviour
     {
         data.ChangeHealth(value); 
     }
-
 
 }

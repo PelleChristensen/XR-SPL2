@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/GirafDancehall/GirafDancehall.unity
     guid: 4755b35b590504809a7525fd2109c2e2
   - enabled: 0
@@ -14,6 +14,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Samples/XR Interaction Toolkit/3.0.6/AR Starter Assets/ARDemoScene.unity
     guid: da4db6c21a88243878fecfe160c1be3b
+  - enabled: 0
+    path: Assets/Scenes/-ref/Sensors.unity
+    guid: fb09ee99f720ed9439acad0b6e31dea9
+  - enabled: 0
+    path: Assets/Scenes/Sensorer/Gyroskop.unity
+    guid: 77bc9319da16c3a4fa232d233986d8cb
+  - enabled: 1
+    path: Assets/Scenes/Sensorer/no-ar-gyro.unity
+    guid: 121facb3fdac8a24eae6129719dc2fad
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 6ee72d15cf39dd748a13eac57397b9af,
       type: 2}

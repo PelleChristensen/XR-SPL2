@@ -3361,6 +3361,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Sensors",
+            "id": "395f87d8-a44a-444d-ab36-ad8399081cb5",
+            "actions": [
+                {
+                    "name": "Rotation",
+                    "type": "Button",
+                    "id": "fe3b138b-99e7-46c7-b9e0-ff869f1c62e7",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "34677245-46cd-4c93-8ea6-346a835535db",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
