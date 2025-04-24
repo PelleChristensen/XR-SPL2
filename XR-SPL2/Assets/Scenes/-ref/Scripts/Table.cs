@@ -4,11 +4,13 @@ using UnityEngine;
 public class Table : MonoBehaviour
 {
      private Gyroscope gyro; 
+
+   
      private bool gyroSupported = false; 
      private Quaternion calibrationOffset = Quaternion.identity;
      private bool isCalibrated = false; 
-
      private Vector3 rotation; 
+
 
      void Start()
      {
@@ -16,22 +18,17 @@ public class Table : MonoBehaviour
 
         //gyroSupported = SystemInfo.supportsGyroscope; 
 
-        Quaternion cameraRotation = Camera.main.transform.rotation;
-        Quaternion adjustedRotation = isCalibrated ? calibrationOffset * cameraRotation : cameraRotation;
-        transform.rotation = adjustedRotation;
+
 
         if(gyroSupported)
         {
-            /*
             gyro = Input.gyro; 
             gyro.enabled = true;
-
-            rotationFix = new Quaternion(0,0,1,0);
-
-            rotation = Vector3.zero;
-             Debug.Log("[AR-DEBUG] GyroSupported: " + gyroSupported);
-             */ 
         }
+
+        Quaternion cameraRotation = Camera.main.transform.rotation;
+        Quaternion adjustedRotation = isCalibrated ? calibrationOffset * cameraRotation : cameraRotation;
+        transform.rotation = adjustedRotation;
      }   
 
      void Update()

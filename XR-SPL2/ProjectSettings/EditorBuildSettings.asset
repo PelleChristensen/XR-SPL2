@@ -20,9 +20,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Sensorer/Gyroskop.unity
     guid: 77bc9319da16c3a4fa232d233986d8cb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Sensorer/no-ar-gyro.unity
     guid: 121facb3fdac8a24eae6129719dc2fad
+  - enabled: 1
+    path: Assets/Profiling/ProfilingOverload.unity
+    guid: 9751f1d17ab80d645b3c4592b379cc7c
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 6ee72d15cf39dd748a13eac57397b9af,
       type: 2}
