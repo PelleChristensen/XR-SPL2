@@ -23,15 +23,18 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Sensorer/no-ar-gyro.unity
     guid: 121facb3fdac8a24eae6129719dc2fad
-  - enabled: 1
+  - enabled: 0
     path: Assets/Profiling/ProfilingOverload.unity
     guid: 9751f1d17ab80d645b3c4592b379cc7c
+  - enabled: 1
+    path: Assets/MobileInput/MobileInput.unity
+    guid: 421e10328fa34d44ea3d9cd1501ba5da
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 6ee72d15cf39dd748a13eac57397b9af,
       type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 0465d33c6aee55f44b0237db8b0e0259,
       type: 2}
-    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f,
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: dff834235b4e8944d9c92f3cacfa3c5c,
       type: 3}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: c199e683398494f32b4cde18e73ab731,
       type: 2}
