@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07c8f3ab3a2b1644b8fd2e34cf9e04f3, type: 3}
+  m_Name: HighScoreData
+  m_EditorClassIdentifier: 
+  apiKey: e2460fc827a90ce87ed53ead2973905de66cb445018a747f4280d77bf2daec91
+  gameId: TestGame
+  submitUrl: https://gamecraft.dk/leaderboard/submit_score.php
+  leaderboardUrl: https://gamecraft.dk/leaderboard/leaderboard.php
